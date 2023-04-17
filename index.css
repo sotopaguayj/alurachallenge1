@@ -1,6 +1,6 @@
-:root{
-  --blue:#0A3871;
-  --claro:#c5daf1;
+:root {
+  --blue: #0a3871;
+  --claro: #c5daf1;
 }
 * {
   padding: 0;
@@ -8,169 +8,191 @@
   font-family: "Inter", sans-serif;
 }
 
-  body{
-    height: 90vh;
+body {
+  height: 90vh;
+  background: var(--claro);
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.left {
+  height: 500px;
+  display: flex;
+  margin-top: 12rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+.input {
+  resize: none;
+  width: 700px;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: var(--blue);
+  background: transparent;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+}
+::placeholder {
+  font-size: 2rem;
+  color: var(--blue);
+}
+.down {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.traduccion{
+  background: rgba(255, 255, 255, 0.25);
+  padding: 1rem;
+}
+button {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  font-weight: bold;
+  transition: 0.2s ease-out;
+  border: 2px solid var(--blue);
+}
+button:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+  transition: 0.2s ease-out;
+}
+.button1 {
+  background: var(--blue);
+  color: var(--claro);
+}
+.button2,
+.buttonCopy {
+  background: var(--claro);
+  color: var(--blue);
+}
+
+.right {
+  height: 500px;
+  width: 100%;
+}
+.nothing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.msg1 {
+  font-weight: bold;
+  color: var(--blue);
+  font-size: 2rem;
+}
+.msg2 {
+  font-size: 1.5rem;
+}
+.result {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  font-size: 2rem;
+  width: 80%;
+  
+}
+.clip {
+  max-height: 500px;
+  max-width: 500px;
+  overflow-y: auto;
+}
+.wait {
+  font-size: 2rem;
+}
+.credits {
+  position: fixed;
+  bottom: 100;
+  font-size: 2rem;
+}
+.credits a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: bold;
+  opacity: 0.5;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+  body {
+    height: 100vh;
     background: var(--claro);
+    display: grid;
+    place-content: center;
   }
-  @media (min-width: 768px) { 
-    body{
-      /* background: #aff8b9; */
-    }
-    .logo{
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-    }
-    .container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-
-    }
-    .left{
-      height: 500px;
-      display: flex;
-      margin-top: 12rem;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .input{
-      width: 700px;
-      border-radius: 1rem;
-      padding: 1rem;
-      font-size: 2rem;
-      color: var(--blue);
-      background: transparent;
-      border: none;
-      outline: none;
-    }
-    ::placeholder{
-      font-size: 2rem;
-      color: var(--blue);
-    }
-    .down{
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-    }
-    .buttons{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 1rem;
-    }
-    button{
-      padding: 1rem;
-      font-size: 1.5rem;
-      border-radius: 1rem;
-      border: none;
-      font-weight: bold;
-      transition: .2s ease-out;
-      border: 2px solid var(--blue);
-    }
-    button:hover{
-      cursor: pointer;
-      transform: scale(0.95);
-      transition: .2s ease-out;
-    }
-    .button1{
-      background: var(--blue);
-      color: var(--claro);
-    }
-    .button2, .buttonCopy{
-      background: var(--claro);
-      color: var(--blue);
-    }
-
-    .right{
-      height: 500px;
-      width: 100%;
-    }
-    .nothing{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .msg{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .msg1{
-      font-weight: bold;
-      color: var(--blue);
-      font-size: 2rem;
-    }
-    .msg2{
-      font-size: 1.5rem;
-    }
-    .result{
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .resultado{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      height: 100%;
-      font-size: 2rem;
-      width: 80%;
-    }
-    .clip{
-      max-height: 500px;
-      max-width: 500px;
-      overflow-y: auto;
-    }
-    .wait{
-      font-size: 2rem;
-    }
-    .credits{
-      position: fixed;
-      bottom: 100;
-      font-size: 2rem;
-    }
-    .credits a {
-      text-decoration: none;
-      color: var(--blue);
-      font-weight: bold;
-      opacity: .5;
-    }
-    .top{
-      display: flex;
-      justify-content: space-between;
-    }
-   }
-  
-  @media (min-width: 1280px) { 
-    body{
-      background: #a14545;
-    }
-    .logo{
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 100px;
-    }
-    .container{
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+  }
+  .left {
+    height: auto;
     display: flex;
-    flex-direction: row;
-
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
   }
-    .left{
-      height: auto;
-      display: flex;
-      margin-top: 12rem;
-    }
-
-    .clip{
-      max-height: 500px;
-      max-width: 500px;
-      overflow-y: auto;
-    }
-   }
-  
+  .input{
+    width: 500px;
+    height: 300px;
+  }
+  .clip {
+    max-height: 500px;
+    max-width: 500px;
+    overflow-y: auto;
+  }
+  .right{
+    width: 600px;
+  }
+  .credits {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    font-size: 1rem;
+  }
+}
